@@ -17,6 +17,10 @@
         "@schematics/angular:guard": {
           "skipTests": true,
           "path": "src/core/guards"
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true,
+          "path": "src/core/interceptors"
         }
       },
       "root": "",
@@ -69,11 +73,11 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          // "options": {
-          //   "ssl": true,
-          //   "sslCert": "./ssl/localhost.pem",
-          //   "sslKey": "./ssl/localhost-key.pem"
-          // },
+          "options": {
+            "ssl": true,
+            "sslCert": "./ssl/localhost.pem",
+            "sslKey": "./ssl/localhost-key.pem"
+          },
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
